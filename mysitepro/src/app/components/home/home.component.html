@@ -1,0 +1,40 @@
+<div id="particles-js" class="hero is-info is-medium is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="is-size-1 has-text-weight-light">Jareem E. Hoff</h1>
+      <div class="container">
+        <hr>
+      </div>
+      <span id="typed" class="is-size-3 has-text-weight-light"></span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <h1 class="is-size-3">About Me</h1>
+    <p class="is-size-5">As a developer, I remind myself everyday that my role in life is to â€œdevelopâ€. If I
+      considered everything
+      that Iâ€™ve ever worked on as completed, then my career title would make the least amount of sense, and should be
+      changed to â€œfinisherâ€. Whether it be a project thatâ€™s started or ourselves as people living day to day
+      life. there always be something that we need to improve. This is why Iâ€™m passionate about what I do, because
+      everyday I get a new opportunity to learn how to better myself in my career path and my life, while helping
+      others do the same. Itâ€™s more than a job, itâ€™s a lifestyle.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    
+    <h1 class="is-size-3">Github Projects</h1>
+    
+    <div *ngIf="!people">
+      <cdk-virtual-scroll-viewport class="box" itemSize="100">
+        <div *cdkVirtualFor="let p of people;">
+
+        </div>
+      </cdk-virtual-scroll-viewport>
+    </div>
+
+  </div>
+</section>
