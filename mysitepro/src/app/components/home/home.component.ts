@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
+import { GitHubService } from '../../services/git-hub-service.service';
 
 import * as particleJS from 'particles.js';
 import { particling } from '../../../assets/particlesjs-config';
@@ -13,13 +14,12 @@ import * as faker from 'faker';
 })
 export class HomeComponent implements OnInit {
   // particleJS: any;
-  people;
+  repos: Object;
 
-  constructor() {
-    
-  }
+  constructor(private ghData: GitHubService) { }
 
   ngOnInit() {
+
     let typed = new Typed("#typed", {
       strings: [
         'I am a ^300 Designer',
@@ -31,17 +31,14 @@ export class HomeComponent implements OnInit {
       typeSpeed: 35,
       backSpeed: 80,
       loop: true,
-
     });
-  
-    this.people = Array(100)
-      .fill(1)
-      .map(_ => {
-        return {
-          name: faker.name.findName(),
-          bio: faker.hacker.phrase(),
-        };
-      });
+
+    this.ghData.getData().subscribe(data => {
+      console.log(data);
+      this.repos = data;
+    });
+
+    
 
     // particleJS.load('particles-js', particling, null);
   }

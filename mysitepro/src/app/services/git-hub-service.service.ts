@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'; 
 
 @Injectable({
   providedIn: 'root'
 })
-export class GitHubServiceService {
+export class GitHubService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getData() {
+    return this.http.get('https://api.github.com/users/12jikan/repos ')
+  }
 }

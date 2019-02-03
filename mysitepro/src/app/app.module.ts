@@ -12,6 +12,7 @@ import { FrostosComponent } from './components/frostos/frostos.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FootNavComponent } from './components/foot-nav/foot-nav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FootNavComponent } from './components/foot-nav/foot-nav.component';
     BrowserModule,
     AppRoutingModule,
     ScrollingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

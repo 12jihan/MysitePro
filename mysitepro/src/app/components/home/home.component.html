@@ -28,10 +28,11 @@
     
     <h1 class="is-size-3">Github Projects</h1>
     
-    <div *ngIf="!people">
-      <cdk-virtual-scroll-viewport class="box" itemSize="100">
-        <div *cdkVirtualFor="let p of people;">
-
+    <div *ngIf="repos">
+      <cdk-virtual-scroll-viewport itemSize="50">
+        <div *cdkVirtualFor="let repo of repos;" class="box">
+          <h1 class="is-size-3">{{ repo.name }}</h1>
+          <a class="button" href="">Go to repo</a>
         </div>
       </cdk-virtual-scroll-viewport>
     </div>
