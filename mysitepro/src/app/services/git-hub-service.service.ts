@@ -9,6 +9,10 @@ export class GitHubService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get('https://api.github.com/users/12jikan/repos ')
+    return this.http.get('https://api.github.com/users/12jikan/repos')
+  }
+
+  getUserData() {
+    return this.http.get('https://api.github.com/users/12jikan')
   }
 }

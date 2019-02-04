@@ -15,6 +15,7 @@ import * as faker from 'faker';
 export class HomeComponent implements OnInit {
   // particleJS: any;
   repos: Object;
+  userInfo: Object;
 
   constructor(private ghData: GitHubService) { }
 
@@ -34,9 +35,14 @@ export class HomeComponent implements OnInit {
     });
 
     this.ghData.getData().subscribe(data => {
-      console.log(data);
+      console.log('list of repos: ', data);
       this.repos = data;
     });
+
+    this.ghData.getUserData().subscribe(data => {
+      console.log('user info: ', data);
+      this.userInfo = data;
+    })
 
     
 
