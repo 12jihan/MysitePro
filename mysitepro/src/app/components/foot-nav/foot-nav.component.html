@@ -1,3 +1,44 @@
-<p>
-  foot-nav works!
-</p>
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
+
+
+    <div class="navbar-brand">
+
+      <!-- Hamburger Icon to Expand -->
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarNaving">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarNaving" class="navbar-menu">
+
+      <div class="navbar-start">
+
+        <a routerLink="/home" class="navbar-item">
+          <p class="subtitle is-size-5">Home</p>
+        </a>
+
+        <a routerLink="/about" class="navbar-item">
+          <p class="subtitle is-size-5">About</p>
+        </a>
+
+      </div>
+
+      <div class="navbar-end">
+
+        <a routerLink="/projects" class="navbar-item">
+          <p class="subtitle is-size-5">Projects</p>
+        </a>
+
+        <a routerLink="/contact" class="navbar-item">
+          <p class="subtitle is-size-5">Contact</p>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+
+</nav>

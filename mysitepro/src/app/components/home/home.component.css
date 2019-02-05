@@ -18,11 +18,11 @@ cdk-virtual-scroll-viewport {
     transition: padding 0.3s, box-shadow 0.3s;
 }
 
-.vrConItem:hover {
+/* .vrConItem:hover {
     background-color: #209cee25;
     padding: 75px 50px;
     box-shadow: 0 1px 5px #333;
-}
+} */
 
 
 /* .tbl-header {
@@ -55,4 +55,14 @@ cdk-virtual-scroll-viewport {
 
 .mb-4 {
     margin-bottom: 100px
+}
+
+.logo-sized img {
+    height: 45px;
+    width: auto;
+}
+
+.hero-header {
+    position: relative;
+    top: 75px;
 }

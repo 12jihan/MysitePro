@@ -16,6 +16,25 @@ export class HomeComponent implements OnInit {
   // particleJS: any;
   repos: Object;
   userInfo: Object;
+  
+  myWork0 = [
+    "Html, CSS, JavaScript",
+    "Angular@latest",
+    "Node.js",
+    "NoSql Database",
+    "Vue.js"
+  ];
+
+  toDoList = [
+    "Learn Python",
+    "Learn Java",
+    "More Internet of Things Projects",
+    "Machine Learning and A.I.",
+    "Frost OS",
+    "Authentication and Security",
+    "Bio-Hacking",
+    "Electrical Engineering"
+  ]
 
   constructor(private ghData: GitHubService) { }
 
@@ -26,7 +45,7 @@ export class HomeComponent implements OnInit {
         'I am a ^300 Designer',
         'I am a ^300 Developer',
         'I am a ^300 Programmer',
-        'I am a ^300 Creator'
+        'I am a ^300 Creator... ^2000'
       ],
       smartBackspace: true,
       typeSpeed: 35,
