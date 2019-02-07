@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   // particleJS: any;
   repos: Object;
   userInfo: Object;
-  
+
   myWork0 = [
     "Html, CSS, JavaScript",
     "Angular@latest",
@@ -53,6 +53,9 @@ export class HomeComponent implements OnInit {
       loop: true,
     });
 
+
+
+
     this.ghData.getData().subscribe(data => {
       console.log('list of repos: ', data);
       this.repos = data;
@@ -61,11 +64,8 @@ export class HomeComponent implements OnInit {
     this.ghData.getUserData().subscribe(data => {
       console.log('user info: ', data);
       this.userInfo = data;
-    })
+    });
 
-    
-
-    // particleJS.load('particles-js', particling, null);
   }
 
 }
