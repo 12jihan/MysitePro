@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { NavComponent } from './components/nav/nav.component';
 import { FootNavComponent } from './components/foot-nav/foot-nav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BannerComponent } from './components/home/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     FrostosComponent,
     PageNotFoundComponent,
     NavComponent,
-    FootNavComponent
+    FootNavComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
